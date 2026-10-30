@@ -24,47 +24,61 @@ footer{color:var(--muted);font-size:.85rem;margin-top:2.4rem;border-top:1px soli
 <body>
 <h1>Privacy Policy — VoiceVault</h1>
 <p class="meta">VoiceVault App Store privacy policy · Last updated 2026-10-31</p>
-
 <div class="card">
-<p>Last updated: 2026-10-30</p>
-<p>VoiceVault is provided by GUO HANGJIANG ("we"). This policy explains how the app handles information.</p>
-<h2>Summary</h2>
+<p>Last updated: 2026-10-31</p>
+<p>VoiceVault is provided by GUO HANGJIANG ("we", "the Developer"). This policy explains what the app does with information when you use VoiceVault on iPhone and Apple Watch.</p>
+<h2>1. Summary</h2>
 <ul>
-<li>We do not collect data.</li>
-<li>No account is required.</li>
-<li>Recording, transcription, search and storage happen on your devices.</li>
-<li>AI is optional and uses a provider you choose with your own API key.</li>
+<li>We do not collect your archive. There is no VoiceVault account and no VoiceVault server that receives your recordings.</li>
+<li>Recording, on-device transcription, search indexing and archive storage happen on your devices.</li>
+<li>AI features are optional and use a third-party provider that you configure with your own API key.</li>
+<li>We do not sell your data, use it for advertising, or use your recordings to train models.</li>
 </ul>
-<h2>Data processed on your devices</h2>
+<h2>2. Information processed on your devices</h2>
+<p>VoiceVault processes:</p>
 <ul>
-<li>Audio you record on Apple Watch.</li>
-<li>Transcripts, search indexes, highlights, summaries, reflections and chat history.</li>
-<li>Settings and preferences.</li>
-<li>Optional body-context labels derived from Apple Health (heart rate, HRV, sleep, steps, workouts).</li>
-<li>Optional approximate place names derived from location while recording.</li>
+<li>Audio you start recording on Apple Watch, together with recording times and marks.</li>
+<li>Transcripts, search indexes, highlights, summaries, daily reflections, remembered facts and chat history.</li>
+<li>Settings and preferences you enter.</li>
+<li>Optional body-context labels derived from Apple Health, if you enable that feature.</li>
+<li>Optional approximate place names derived from location while recording, if you enable that feature.</li>
+<li>Diagnostics you choose to export. Diagnostic exports exclude recordings, transcript text, chat content and credentials.</li>
 </ul>
-<p>This data is stored locally on your devices. We do not operate a server that receives your archive and cannot access it remotely.</p>
-<h2>Optional AI</h2>
-<p>If you configure a third-party AI provider, the text and context needed for the request are sent directly from your iPhone to that provider. Original audio is not uploaded. The provider's privacy and retention practices apply. You can remove the configuration at any time.</p>
-<h2>Optional cloud transcription</h2>
-<p>If you enable a cloud or self-hosted transcription service, audio is sent directly to the endpoint you configure after a separate consent notice. On-device transcription remains available without this.</p>
-<h2>Health and location</h2>
-<p>Health access is read-only. We do not write stress estimates to Apple Health. Location is used only while you record and is reduced to approximate place names. You can disable either feature in Settings.</p>
-<h2>Retention and deletion</h2>
-<p>You choose how long audio is kept. Deleting audio does not delete text unless you choose to. You can delete a segment, an hour, a day or all data in the app. The archive is excluded from iCloud and computer backups; removing the app removes the local archive.</p>
-<h2>Children</h2>
-<p>VoiceVault is not directed to children. Do not record other people without the notice and consent required by law.</p>
-<h2>Contact</h2>
-<p>elk-sort7q@icloud.com</p>
+<p>This information is stored in the app's local container on your devices. We cannot remotely browse or retrieve it.</p>
+<h2>3. Optional health and location context</h2>
+<p>Health access is read-only. If you enable Body data, VoiceVault may read heart rate, heart-rate variability (SDNN), resting heart rate, steps, sleep and workouts from Apple Health on your iPhone. We do not write stress estimates to Apple Health and do not start workouts to collect extra measurements.</p>
+<p>Stress labels, if shown, are algorithmic estimates of physiological strain relative to your personal baseline. They are not a medical diagnosis, not a measured emotion and not an Apple-provided stress score. HRV is only one input. Estimates may be missing or wrong, and no clinically validated accuracy rate is claimed.</p>
+<p>If you enable Location data, Apple Watch may record available location observations while you are recording. The iPhone reduces them to approximate place names and may send coordinates to Apple's geocoding service to obtain a readable name. VoiceVault does not store a precise route or continuous location history. Place labels are approximate and do not prove attendance at a venue.</p>
+<p>Both features are optional. Recording, on-device transcription and local search work without them. Turning a feature off stops new collection; it does not rewrite summaries or delete labels already attached to earlier records. Apple Health has its own storage and iCloud settings, which are separate from VoiceVault.</p>
+<h2>4. Optional AI providers</h2>
+<p>If you configure a third-party AI provider and use AI features, your iPhone sends the text needed for that request directly to the endpoint you chose. Depending on the feature, this may include relevant transcript segments, your question, remembered facts, marks, and optional body/activity or approximate place labels.</p>
+<p>Original audio is not sent to the AI provider by these features. Individual HealthKit samples, sample identifiers, exact coordinates and complete location trails are not included. This does not make a request anonymous: transcripts, questions or saved text can themselves contain health details, addresses or other identifying information.</p>
+<p>Enabled automatic features (for example hour summaries or daily reflections) can make requests without a separate tap for each request. Provider fees are separate. The provider's terms, retention, training and international processing practices apply. We do not control them and do not promise that every provider offers zero retention. Review the provider before using sensitive content.</p>
+<p>Connection checks and model-list requests also contact the configured service and may include authentication information and your IP address. Requests do not pass through a VoiceVault server. Removing AI settings stops future requests but does not delete data already received by a provider.</p>
+<h2>5. Optional cloud or self-hosted transcription</h2>
+<p>VoiceVault 1.0 performs transcription on device. A future version may offer optional cloud or self-hosted transcription. If that option is offered, it will require a separate consent notice showing the recipient and endpoint before any audio is sent. Audio may contain sensitive information or other people's voices. On-device transcription will remain available without that sharing. Provider retention and training practices would apply.</p>
+<h2>6. Apple services and purchases</h2>
+<p>Apple processes App Store downloads, purchases and refunds. We do not receive your full payment-card details. Apple's geocoding and map services process location queries as described above. Apple's own privacy policy applies to those services.</p>
+<h2>7. Storage, retention and deletion</h2>
+<p>You choose how long original audio is kept. Removing audio does not remove transcripts, summaries, highlights, remembered facts or chat history unless you also delete them. Removed audio can no longer be played back.</p>
+<p>You can delete a segment, an hour, a day, or all data in the app. The archive is excluded from iCloud and computer device backups, and there is no VoiceVault server copy to restore if the app is deleted or a device is lost. Removing the app removes its local container; it does not remove copies you exported or data already received by a third-party provider.</p>
+<p>API credentials are stored in the device-only Keychain. Deleting AI settings removes the saved configuration and credentials, but does not delete existing transcripts or results.</p>
+<h2>8. Security</h2>
+<p>We use operating-system storage protection and the device Keychain for credentials. No storage or transmission method can guarantee absolute security. Protect access to your devices, choose trustworthy providers and keep your operating system up to date.</p>
+<h2>9. Your choices and rights</h2>
+<p>You can stop recording, change audio retention, disable automatic AI features, remove AI settings, and revoke optional health or location permissions. Withdrawing permission does not undo processing already carried out lawfully.</p>
+<p>Depending on applicable law, you may have rights to access, correction, deletion, restriction, objection, portability, withdrawal of consent, or a complaint to a supervisory authority. Contact us at the address below. Because the archive is only on your devices, we cannot remotely retrieve or erase it; you can delete it in the app. For data held by an AI provider, you may also need to use that provider's request process.</p>
+<h2>10. Children and other people's information</h2>
+<p>VoiceVault is not directed to children. Recording may capture information about other people, and their privacy rights still apply even when the recording stays local. Do not record, disclose or send another person's information to a service without the notice and consent required by law. Where parental or guardian consent is required, it must be obtained before the relevant processing. In mainland China, information about children under 14 is treated as sensitive personal information.</p>
+<h2>11. International processing</h2>
+<p>AI providers, Apple services and email services may process information outside your country or region depending on the service and your configuration. Direct routing with your own API key does not by itself prevent an international transfer. This policy is not a blanket consent to disclose sensitive information.</p>
+<h2>12. Changes</h2>
+<p>The date above identifies this version. Material changes will be explained through an appropriate notice, and additional consent will be obtained where required by law.</p>
+<h2>13. Contact</h2>
+<p>Email: elk-sort7q@icloud.com</p>
 </div>
-
 <footer>
-<p>
-<a href="../index.html">Saluton Apps</a> ·
-<a href="../privacy/voicevault.html">Privacy</a> ·
-<a href="../terms/voicevault.html">Terms</a> ·
-<a href="../support/voicevault.html">Support</a>
-</p>
+<p><a href="../index.html">Saluton Apps</a> · <a href="../privacy/voicevault.html">Privacy</a> · <a href="../terms/voicevault.html">Terms</a> · <a href="../support/voicevault.html">Support</a></p>
 </footer>
 </body>
 </html>
