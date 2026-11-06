@@ -24,58 +24,109 @@ footer{color:var(--muted);font-size:.85rem;margin-top:2.4rem;border-top:1px soli
 </head>
 <body>
 <h1>Privacy Policy — MigraineVault</h1>
-<p class="meta">MigraineVault App Store privacy notice · Last updated 2026-09-29</p>
+<p class="meta">MigraineVault App Store privacy notice · Last updated 2026-11-06</p>
 
 <div class="card">
 <h2>1. Overview</h2>
-<p><b>MigraineVault</b> (the name it is published under on the App Store) is designed, developed, and owned by us. We fully comply with Apple's App Store privacy rules (App Tracking Transparency &amp; Privacy Nutrition Labels) and treat <b>Data Not Collected</b> as a baseline requirement of the product design.</p>
-<p>This privacy policy applies to all available versions of <b>MigraineVault</b> (App Store releases and TestFlight builds). It explains how <b>it</b> handles your data when you install, use, or update <b>MigraineVault</b>, and what rights you have.</p>
+<p><b>MigraineVault</b> is a private migraine and headache diary for adults. It is designed, developed, and owned by us. This policy explains what data the App uses, where it is stored, and what choices you have.</p>
+<p>MigraineVault has <b>no account system</b>, no advertising, no third-party analytics, and no tracking across apps or websites. Your migraine and health entries stay on your device.</p>
 </div>
 
 <div class="card">
-<h2>2. We collect no data (Data Not Collected)</h2>
-<p>When you open this App, it <b>does not</b>:</p>
+<h2>2. Data stored on your device</h2>
+<p>The following information is stored locally in the App's sandbox (SwiftData / UserDefaults) and is accessible only to the App on your device:</p>
 <ul>
-<li>Upload or sync any of your content (there is no backend server)</li>
-<li>Request location, contacts, photos, microphone, or photo library (except for explicit user actions)</li>
-<li>Access Apple's IDFA advertising identifier, enable advertising SDKs, or perform ad tracking</li>
-<li>Use third-party advertising / analytics / crash SDKs (nor any of the three categories above)</li>
-<li>Track your device ID or activity</li>
+<li>Migraine attacks: date/time, severity, duration, pain location, symptoms, triggers and notes</li>
+<li>Daily check-in: sleep, stress, hydration, caffeine, optional barometric pressure and period-started flag</li>
+<li>Medications and dose logs</li>
+<li>App settings: language, reminder times, Weather sync switch, Trigger-day reminder switch and App Lock</li>
+<li>Widget snapshot data shared with the MigraineWidget through the App Group</li>
 </ul>
-<p>All data within the App (user input and subscription status) is stored only in the local App sandbox.</p>
+<p><b>We do not upload, sync or store your health entries on a developer server.</b> MigraineVault does not use iCloud or CloudKit in this version. If you delete the App, the local data is deleted with it and cannot be recovered by us.</p>
 </div>
 
 <div class="card">
-<h2>3. Local data you store yourself</h2>
-<p>Content you enter (vaccination/medication records, body temperature, countdown days, holiday calendar, passcode-lock settings) is stored on-device in <b>SQLite / UserDefaults</b> and is accessible only to this process.</p>
-<p>iCloud: MigraineVault does not use iCloud sync. If a future version enables it, we will follow China's Personal Information Protection Law and the GDPR data-minimization principle, and will proactively ask for your consent.</p>
+<h2>3. Location and weather / barometric pressure</h2>
+<p>Weather correlation is an <b>optional</b> feature. When it is enabled, MigraineVault requests <b>When In Use</b> location access once to fetch local air pressure and weather from Open-Meteo, a free public weather API.</p>
+<ul>
+<li>Only <b>coarse location</b> is used: coordinates are rounded to 0.1° (about 50 km) before the request.</li>
+<li>The rounded point is cached locally for up to 7 days so the App can reuse it without asking again.</li>
+<li>No name, email, account ID, advertising identifier or device identifier is sent with the request.</li>
+<li>Open-Meteo returns pressure/weather data; we do not store your location on a developer server.</li>
+<li>You can turn off <b>Weather sync</b> in Settings at any time. If you deny location access, the rest of the App still works; only the weather/pressure section is unavailable.</li>
+</ul>
+<p><b>International processing:</b> weather requests are sent to Open-Meteo, which may process the request outside your country or region. The request contains only rounded coordinates and no user identity. If you do not want this, keep Weather sync off.</p>
 </div>
 
 <div class="card">
-<h2>4. Payments and subscriptions</h2>
-<p>Subscriptions / in-app purchases / one-time purchases in MigraineVault are all handled by Apple, with the <b>App Store acting as the intermediary</b>. We do not collect your payment information, Apple ID, device ID, address, or any personally identifiable information.</p>
-<p><b>Subscription terms</b>: payments are processed by Apple, and refunds are handled by Apple Support (<a href="https://getsupport.apple.com">getsupport.apple.com</a>).</p>
+<h2>4. Purchases and subscriptions</h2>
+<p>Subscriptions are sold through Apple's App Store. Apple processes payment and billing; we do not receive your payment card details, Apple ID password or billing address.</p>
+<p>We use <b>RevenueCat</b> to validate subscription receipts and determine whether Pro features are unlocked. RevenueCat processes purchase history and subscription status for this purpose. It is not used for advertising, tracking or building a profile of you. See <a href="https://www.revenuecat.com/privacy/">RevenueCat's privacy policy</a>.</p>
+<p>You can manage or cancel subscriptions in your Apple Account settings. Refunds are handled by Apple Support.</p>
 </div>
 
 <div class="card">
-<h2>5. Children's privacy</h2>
-<p>MigraineVault is intended for ages 4+ and is not directed at children under 13; it does not collect any data.</p>
+<h2>5. Permissions we request</h2>
+<ul>
+<li><b>Location (When In Use)</b>: optional, only for the weather/barometric pressure feature described above.</li>
+<li><b>Notifications</b>: optional, for medication reminders, daily check-in reminders and trigger-day alerts. Notifications are scheduled locally on your device.</li>
+<li><b>Face ID / Touch ID</b>: optional, used only by the App Lock feature through Apple's LocalAuthentication. Biometric data is handled by iOS and is never accessible to us.</li>
+</ul>
+<p>You can change these permissions in iOS Settings. Denying an optional permission does not prevent you from using the core diary.</p>
 </div>
 
 <div class="card">
-<h2>6. Open source and compliance manifest</h2>
-<p>This App's <code>PrivacyInfo.xcprivacy</code> explicitly contains no "required reason APIs" that Apple deems disclosable — so compliance passes Apple's automated scan through the manifest bundled with the App, with no manual submission required.</p>
+<h2>6. Third-party services</h2>
+<ul>
+<li><b>Apple App Store / StoreKit</b>: payment processing, subscription management and receipt validation.</li>
+<li><b>RevenueCat</b>: subscription entitlement validation. See <a href="https://www.revenuecat.com/privacy/">RevenueCat privacy policy</a>.</li>
+<li><b>Open-Meteo</b>: weather and barometric pressure data. See <a href="https://open-meteo.com/en/terms">Open-Meteo terms</a>.</li>
+</ul>
+<p>We do not use advertising networks, analytics SDKs, crash-reporting SDKs, social login, AI services or data brokers.</p>
 </div>
 
 <div class="card">
-<h2>7. Policy changes</h2>
-<p>If we change how we handle data (for example, by adding cloud sync or crash tracking in the future), we will update this page before the new version is released and will proactively ask for your consent.</p>
+<h2>7. App Privacy label and privacy manifest</h2>
+<p>Our App Store privacy label declares:</p>
+<ul>
+<li><b>Coarse Location</b> — App Functionality; not linked to your identity; not used for tracking.</li>
+<li><b>Purchase History</b> — App Functionality; not linked to your identity; not used for tracking.</li>
+</ul>
+<p>All other data types are not collected. The App's <code>PrivacyInfo.xcprivacy</code> declares no tracking, no tracking domains, the required-reason UserDefaults API and the same collected data types. We do not access the advertising identifier (IDFA) or ask for App Tracking Transparency permission.</p>
 </div>
 
 <div class="card">
-<h2>8. Contact us</h2>
-<p>If you have any privacy questions, reports about an individual App, or concerns, you can contact us at:</p>
+<h2>8. Children's privacy</h2>
+<p>MigraineVault is a self-management tool intended for adults and is not directed at children under 13. We do not knowingly collect personal information from children. If you believe a child has provided information, contact us and we will help you delete the local data.</p>
+</div>
+
+<div class="card">
+<h2>9. Your choices and rights</h2>
+<ul>
+<li>Disable Weather sync to stop location-based weather requests.</li>
+<li>Disable notifications or App Lock in Settings or iOS Settings.</li>
+<li>Delete individual entries in the App, or delete the App to remove all local data.</li>
+<li>Manage or cancel subscriptions through Apple.</li>
+<li>Contact us with privacy questions or requests.</li>
+</ul>
+<p>Because health entries are stored only on your device, we cannot access, export or delete them for you; you control them directly in the App.</p>
+</div>
+
+<div class="card">
+<h2>10. Security and retention</h2>
+<p>Health entries remain in the App's local sandbox and are protected by iOS app sandboxing. Optional App Lock adds Face ID / Touch ID / passcode protection. We retain no server-side copy of your entries. Weather location cache is kept for up to 7 days and can be removed by deleting the App.</p>
+</div>
+
+<div class="card">
+<h2>11. Changes to this policy</h2>
+<p>If a future version adds a new data practice (for example cloud sync or crash reporting), we will update this page before release and update the App Store privacy label and privacy manifest. The “Last updated” date at the top will change.</p>
+</div>
+
+<div class="card">
+<h2>12. Contact us</h2>
+<p>If you have any privacy questions or concerns, contact:</p>
 <p><b>Email: </b> <a href="mailto:elk-sort7q@icloud.com">elk-sort7q@icloud.com</a></p>
+<p>Developer: Hong Cai Guo (Saluton Apps)</p>
 </div>
 </body>
 </html>
